@@ -18,7 +18,7 @@ const TopBar = () => {
                         <Nav.Link> About Us</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/">
-                        <Nav.Link> Contact Us</Nav.Link>
+                        <Nav.Link> Contact</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/">
                         <Nav.Link> Terms and Policy</Nav.Link>
