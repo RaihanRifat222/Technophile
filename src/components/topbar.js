@@ -9,21 +9,22 @@ const TopBar = () => {
         <Navbar  bg='nav' varient='dark' expand='lg'>
             <Container fluid >
                 
-                <Navbar.Brand>Technophile</Navbar.Brand>
+                <Navbar.Brand style={{ color: "white" }}>Technophile</Navbar.Brand>
                 <Nav className='ms-auto'>
-                    <LinkContainer to="/">
-                        <Nav.Link> Home</Nav.Link>
+                    <LinkContainer to="/" style={{ color: "white" }}>
+                        <Nav.Link > Home</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/about">
+                    <LinkContainer to="/about" style={{ color: "white" }}>
                         <Nav.Link> About Us</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/contact">
+                    <LinkContainer to="/contact" style={{ color: "white" }}>
                         <Nav.Link> Contact</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/policy">
+                    <LinkContainer to="/policy" style={{ color: "white" }}>
                         <Nav.Link> Terms and Policy</Nav.Link>
                     </LinkContainer>
                 </Nav>
+                
             </Container>
         </Navbar>
     </div>
