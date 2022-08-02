@@ -17,21 +17,18 @@ const about = () => {
         </Row>
         <Row>
           <h1>Our Products</h1>
-          <Col md={3}>Phone, Tablet, Speaker, True wireless, Memory card, Hard drive, Pendrive, Screen protector, Gimble, Action camera, AI security system, Charger, Adapter, Power Bank, Smart tracker - Gadget & Gear has it all.
+          <Col md={6}>Phone, Tablet, Speaker, True wireless, Memory card, Hard drive, Pendrive, Screen protector, Gimble, Action camera, AI security system, Charger, Adapter, Power Bank, Smart tracker - Gadget & Gear has it all.
           </Col>
-          <Col md={3}>Technophile has turned into a trusted platform among tech-savvy people owing to different attributes, such as - a trusted online and offline shopping platform, a wide range of international brands, fast delivery service, genuine products only, and an official warranty facility, which ultimately ensures a phenomenal & premium experience.
+          <Col md={6}>Technophile has turned into a trusted platform among tech-savvy people owing to different attributes, such as - a trusted online and offline shopping platform, a wide range of international brands, fast delivery service, genuine products only, and an official warranty facility, which ultimately ensures a phenomenal & premium experience.
           </Col>
-          {/* <Col md={3}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam esse aliquam quasi libero natus dolores cumque alias, facere quam necessitatibus rerum maxime a, perspiciatis provident non similique! Enim voluptates eius mollitia corporis doloremque tempora dolores id quam voluptatibus ab omnis quidem inventore, exercitationem, eligendi quas, est fugit iste dolorem error?
-          </Col>
-          <Col md={3}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam esse aliquam quasi libero natus dolores cumque alias, facere quam necessitatibus rerum maxime a, perspiciatis provident non similique! Enim voluptates eius mollitia corporis doloremque tempora dolores id quam voluptatibus ab omnis quidem inventore, exercitationem, eligendi quas, est fugit iste dolorem error?
-          </Col> */}
+         
           
         </Row>
         <Row>
         <h1>Our Vision</h1>
-          <Col md={3}>Along the way, Technophile has earned domestic and global recognition for its experience and proven track record in a variety of electronics fields. Walton is the pioneer of developing state of the art designs and modern technology having leading market share specializing in Multi-Stored Refrigerators, Freezers, Air Conditioners, LED/ LCD televisions, Motorcycles, Smart Phones and Home Appliances.
+          <Col md={6}>Along the way, Technophile has earned domestic and global recognition for its experience and proven track record in a variety of electronics fields. Walton is the pioneer of developing state of the art designs and modern technology having leading market share specializing in Multi-Stored Refrigerators, Freezers, Air Conditioners, LED/ LCD televisions, Motorcycles, Smart Phones and Home Appliances.
           </Col>
-          <Col md={3}>Technophile is working on carrying the flag of red and green into the global market presence from the present 40 countries to more than 200 countries to dominate Go Global and the top five Electronics Brand of the Globe within 2030.
+          <Col md={6}>Technophile is working on carrying the flag of red and green into the global market presence from the present 40 countries to more than 200 countries to dominate Go Global and the top five Electronics Brand of the Globe within 2030.
           </Col>
         </Row>
     </Container>

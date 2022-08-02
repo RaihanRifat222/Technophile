@@ -17,10 +17,10 @@ const TopBar = () => {
                     <LinkContainer to="/about">
                         <Nav.Link> About Us</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/">
+                    <LinkContainer to="/contact">
                         <Nav.Link> Contact</Nav.Link>
                     </LinkContainer>
-                    <LinkContainer to="/">
+                    <LinkContainer to="/policy">
                         <Nav.Link> Terms and Policy</Nav.Link>
                     </LinkContainer>
                 </Nav>
