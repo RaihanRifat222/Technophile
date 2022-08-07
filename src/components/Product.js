@@ -1,6 +1,9 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Card,Button, Row, Col } from 'react-bootstrap'
+import products from '../productdata'
 const Product = ({p}) => {
+  const [varient, setVarient] = useState ();
+  const [quantity, setQuantity] = useState (1);
   return (
     
     <Card style={{ width: '18rem' }}>
@@ -11,9 +14,9 @@ const Product = ({p}) => {
           <Row>
             <Col md={6}>
                 <h6>Varients</h6>
-                <select>
+                <select value={varient} onChange={e => setQuantity (e.target.value)}>
                     {p.varients.map( varient => (
-                        <option value={varient}>{varient}</option>
+                        <option >{varient}</option>
                     )
 
                     )}
@@ -21,9 +24,12 @@ const Product = ({p}) => {
             </Col>
             <Col md={6}>
                 <h6>Quantity</h6>
-                <select>
-                    {[...Array(10).keys()].map((v) => (
-                        <option value= {v+1}>{v+1}</option>
+                <select  value= {quantity} onChange={e=> setQuantity(e.target.value)}>
+                    {[...Array(10).keys()].map((v,i) => (
+                        <option 
+                       
+                        >{i+1}
+                        </option>
                     )
                     )
                     }
@@ -32,7 +38,11 @@ const Product = ({p}) => {
             <Col md={6}></Col>
           </Row>
         </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
+        <Row>
+          <Col md={6}>Price : {p.prices[0][varient]  }</Col>
+          <Col md={6}></Col>
+          <Col md={6}></Col>
+        </Row>
       </Card.Body>
     </Card>
   
