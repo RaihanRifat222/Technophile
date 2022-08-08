@@ -1,7 +1,7 @@
 const products = [
     {
       name: "Iphone 12 Black",
-      varients: ["64 GB", "128 GB", "256 GB"],
+      varients: ["64GB", "128GB", "256GB"],
       prices: [
         {
           '64GB': 80000,
