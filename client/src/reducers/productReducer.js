@@ -4,7 +4,7 @@ export const getAllProductReducer = (state = {}, action) =>{
             return{
                 ...state
             }
-            case 'GET_PIZZA_SUCCESS':
+            case 'GET_PRODUCT_SUCCESS':
                 return{
                     products: action.payload,
                 }
