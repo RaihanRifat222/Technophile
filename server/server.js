@@ -18,7 +18,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 //route
-app.use('api/products', require('./routes/productRoute'))
+app.use('/api/products', require('./routes/productRoute'))
 app.get('/', (req, res)=>{
     res.send('<h1>hello from node serverrr <h1/>')
 })

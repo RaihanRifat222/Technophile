@@ -6,6 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 
 
 const Product = ({p}) => {
+  
   const [varient, setVarient] = useState (p.varients[0]);
   const [quantity, setQuantity] = useState (1);
   const [show, setShow] = useState(false);
