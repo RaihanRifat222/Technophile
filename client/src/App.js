@@ -7,12 +7,14 @@ import contact from "./components/contact";
 import policy from "./components/policy"
 import NavBar from "./components/NavBar"
 import HomeScreen from "./screens/HomeScreen";
+import CartScreen from "./screens/cartScreen";
 function App() {
   return (
     <BrowserRouter>
      <TopBar/>
      <NavBar/>
      <Switch>
+     <Route path='/cart' component={CartScreen} exact></Route>
       <Route path='/about' component={About} exact></Route>
       <Route path='/contact' component={contact} exact></Route>
       <Route path='/policy' component={policy} exact></Route>
