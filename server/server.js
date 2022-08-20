@@ -19,6 +19,7 @@ app.use(morgan('dev'))
 
 //route
 app.use('/api/products', require('./routes/productRoute'))
+app.use('api/users', require('./routes/userRoutes'))
 app.get('/', (req, res)=>{
     res.send('<h1>hello from node serverrr <h1/>')
 })
