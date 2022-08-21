@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { FaMinusCircle, FaPlusCircle, FaTrash } from "react-icons/fa";
 import { addToCart, deleteFromCart } from "../actions/cartActions";
-// import Checkout from "../components/Checkout";
+import Checkout from "../components/Checkout";
 const CartScreen = () => {
   const cartState = useSelector((state) => state.cartReducer);
   const cartItems = cartState.cartItems;
@@ -75,7 +75,7 @@ const CartScreen = () => {
             <h1>Payment Info</h1>
             <h4>Sub Total </h4>
             <h4>RS : {subTotal} /-</h4>
-            {/* <Checkout subTotal={subTotal} /> */}
+            <Checkout subTotal={subTotal} />
           </Col>
         </Row>
       </Container>

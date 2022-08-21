@@ -10,12 +10,14 @@ import HomeScreen from "./screens/HomeScreen";
 import CartScreen from "./screens/cartScreen";
 import Register from "./screens/Register";
 import Login from "./screens/Login";
+import OrderScreen from "./screens/OrderScreen";
 function App() {
   return (
     <BrowserRouter>
      <TopBar/>
      <NavBar/>
      <Switch>
+     <Route path='/orders' component={OrderScreen} exact></Route>
      <Route path='/login' component={Login} exact></Route>
      <Route path='/register' component={Register} exact></Route>
      <Route path='/cart' component={CartScreen} exact></Route>

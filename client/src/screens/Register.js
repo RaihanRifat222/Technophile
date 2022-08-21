@@ -20,7 +20,7 @@ const Register = () => {
 
   const registerhandler = () => {
     if (password !== confrimPassword) {
-      alert("Password do not match");
+      alert("Password does not match");
     } else {
       const user = { name, email, password, confrimPassword };
       dispatch(registerUser(user));
@@ -30,7 +30,7 @@ const Register = () => {
     <>
       <Container>
         {loading && <Loader />}
-        {success && <Success success="User Register Successfully" />}
+        {success && <Success success="User Registered Successfully" />}
         {error && <Error error="somthing went wrong" />}
         <Form>
           <h1>Regiteration </h1>
