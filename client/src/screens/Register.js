@@ -3,9 +3,9 @@ import { Container, Form, Button } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { registerUser } from "../actions/userAction";
 import { useSelector } from "react-redux";
-// import Loader from "../components/Loader";
-// import Success from "../components/Success";
-// import Error from "../components/Error";
+import Loader from "../components/Loader";
+import Success from "../components/Success";
+import Error from "../components/Error";
 
 const Register = () => {
   const registerState = useSelector((state) => state.registerUserReducer);
@@ -29,7 +29,9 @@ const Register = () => {
   return (
     <>
       <Container>
-      
+        {loading && <Loader />}
+        {success && <Success success="User Register Successfully" />}
+        {error && <Error error="somthing went wrong" />}
         <Form>
           <h1>Regiteration </h1>
           <Form.Group className="mb-3" controlId="formBasicName">
@@ -84,5 +86,6 @@ const Register = () => {
     </>
   );
 };
+
 
 export default Register;

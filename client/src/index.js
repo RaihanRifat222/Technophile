@@ -8,7 +8,7 @@ import App from "./App";
 import HomeScreen from './screens/HomeScreen'
 ReactDOM.render(
   <Provider store = {store}>
-    <App /> <HomeScreen/>
+    <App /> 
   </Provider>,
   document.getElementById("root")
 );
