@@ -24,7 +24,7 @@ const Checkout = ({ subTotal }) => {
         shippingAddress
         token={tokenHandler}
         stripeKey="pk_test_51LZLEtIFvNXxlmHtpaiCc6Nj8bAlVlA1iwkhuc8ZSie8u67rhc6VGTmXaALkE60gvTnKqdJ8hL4mMBGgE4cXMMOt009GyRNJQ8"
-        currency="TK"
+        currency="BDT"
       >
         <Button>Pay Now</Button>
       </StripeCheckout>

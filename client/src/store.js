@@ -1,11 +1,23 @@
-import {createStore, combineReducers, applyMiddleware} from 'redux'
-
-import thunk from 'redux-thunk'
-import {composeWithDevTools} from 'redux-devtools-extension'
-import { getAllProductReducer } from './reducers/productReducer'
-import { cartReducer } from './reducers/cartReducer'
-import { registerUserReducer, loginUserReducer } from './reducers/userReducer'
-import { placeOrderReducer, getUserOrdersReducer } from './reducers/orderReducer'
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { composeWithDevTools } from "redux-devtools-extension";
+import {
+  getAllProductReducer,
+  addProductReducer,
+  getProductByIdReducer,
+  updateProductByIdReducer,
+} from "./reducers/productReducer";
+import { cartReducer } from "./reducers/cartReducer";
+import {
+  registerUserReducer,
+  loginUserReducer,
+  getAllUsersReducer,
+} from "./reducers/userReducer";
+import {
+  placeOrderReducer,
+  getUserOrdersReducer,
+  allUserOrdersReducer,
+} from "./reducers/orderReducer";
 const cartItems = localStorage.getItem("cartItems")
   ? JSON.parse(localStorage.getItem("cartItems"))
   : [];
@@ -18,7 +30,9 @@ const rootReducer = combineReducers ({
     registerUserReducer : registerUserReducer,
     loginUserReducer: loginUserReducer,
     placeOrderReducer : placeOrderReducer,
-    getUserOrdersReducer: getUserOrdersReducer
+    getUserOrdersReducer: getUserOrdersReducer,
+    addProductReducer: addProductReducer,
+    allUserOrdersReducer: allUserOrdersReducer,
 })
 const initialState ={
     cartReducer:{

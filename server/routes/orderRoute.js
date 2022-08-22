@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require("uuid");
 const stripe = require("stripe")(
   "sk_test_51LZLEtIFvNXxlmHtJth1i80ndskTWn0KkJuopPdN4EBQlVkivfVG8K7i8OFnGZ3HgHeefA9YXcULYpFncz8grW6V00POWyzevq"
 );
-const Order = require("../models/orderModel");
+const Order = require("../model/orderModel");
 
 router.post("/placeorder", async (req, res) => {
   const { token, subTotal, currentUser, cartItems } = req.body;
@@ -16,7 +16,7 @@ router.post("/placeorder", async (req, res) => {
     const payment = await stripe.charges.create(
       {
         amount: subTotal * 100,
-        currency: "inr",
+        currency: "bdt",
         customer: customer.id,
         receipt_email: token.email,
       },
