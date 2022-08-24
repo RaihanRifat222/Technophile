@@ -46,6 +46,6 @@ export const deleteUser = (userid) => async (dispatch) => {
     window.location.reload();
     // console.log(res);
   } catch (error) {
-    swal("Errro While Deleteing User");
+    swal("Error While Deleteing User");
   }
 };

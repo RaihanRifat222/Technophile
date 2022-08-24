@@ -49,7 +49,7 @@ export const addProductReducer = (state = {}, action) => {
         };
       case "GET_PRODUCTBYID_SUCCESS":
         return {
-          pizza: action.payload,
+          products: action.payload,
           loading: false,
         };
       case "GET_PRODUCTBYID_FAIL":

@@ -1,53 +1,79 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AiFillDelete } from "react-icons/ai";
+import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { Table } from "react-bootstrap";
-import { deleteUser, getAllUsers } from "../../actions/userAction";
-import Loader from "./../Loader";
-import Error from "./../Error";
+import { deleteProduct, getAllProducts } from "../../actions/productAction";
+import Loader from "../../components/Loader";
+import Error from "../../components/Error";
+import { Link } from "react-router-dom";
 
-const Userlist = () => {
-  const userState = useSelector((state) => state.getAllUsersReducer);
-  const { loading, error, users } = userState;
+const Productslist = () => {
   const dispatch = useDispatch();
+  const productstate = useSelector((state) => state.getAllProductReducer);
+  const { loading, products, error } = productstate;
+  console.log(products);
   useEffect(() => {
-    dispatch(getAllUsers());
+    dispatch(getAllProducts());
   }, [dispatch]);
   return (
-    <div>
-      <h1>User List</h1>
-      {loading && <Loader />}
-      {error && <Error error="Error While Fetching Users" />}
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>User ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users &&
-            users.map((user) => (
-              <tr key={user._id}>
-                <td>{user._id}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>
-                  <AiFillDelete
-                    style={{ color: "red", cursor: "pointer" }}
-                    onClick={() => {
-                      dispatch(deleteUser(user._id));
-                    }}
-                  />
-                </td>
+    <>
+      {loading ? (
+        <Loader />
+      ) : error ? (
+        <Error>Error while fetching products {error}</Error>
+      ) : (
+        <div>
+          <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Product Name</th>
+                <th>Prices</th>
+                <th>Category</th>
+                <th>Action</th>
               </tr>
-            ))}
-        </tbody>
-      </Table>
-    </div>
+            </thead>
+            <tbody>
+              {products &&
+                products.map((product) => (
+                  <tr>
+                    <td>
+                      <img
+                        src={product.image}
+                        alt="logo"
+                        width="100px"
+                        height="100px"
+                      />
+                    </td>
+                    <td>{product.name}</td>
+                    <td>
+                      Small : {product.prices[0]["small"]}
+                      <br />
+                      Medium : {product.prices[0]["medium"]}
+                      <br />
+                      Large : {product.prices[0]["large"]}
+                    </td>
+                    <td>{product.category}</td>
+                    <td>
+                      <Link to={`/admin/editproduct/${product._id}`}>
+                        <AiFillEdit style={{ cursor: "pointer" }} />
+                      </Link>
+                      &nbsp;
+                      <AiFillDelete
+                        style={{ color: "red", cursor: "pointer" }}
+                        onClick={() => {
+                          dispatch(deleteProduct(product._id));
+                        }}
+                      />
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </Table>
+        </div>
+      )}
+    </>
   );
 };
 
-export default Userlist;
+export default Productslist;

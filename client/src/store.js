@@ -33,6 +33,8 @@ const rootReducer = combineReducers ({
     getUserOrdersReducer: getUserOrdersReducer,
     addProductReducer: addProductReducer,
     allUserOrdersReducer: allUserOrdersReducer,
+    getAllUsersReducer: getAllUsersReducer,
+    
 })
 const initialState ={
     cartReducer:{

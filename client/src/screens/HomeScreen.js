@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Container, Row, Col } from 'react-bootstrap';
 import Product from '../components/Product';
-
+import Filters from '../components/Filters';
 
 const HomeScreen = () => {
 
@@ -21,6 +21,7 @@ console.log(pp)
       // loading ? (<h1> Loading ... </h1>)
       // : error ? (<h1>Error while fetching products</h1>)
       ( <Row>
+        <Filters/>
         {pp.map(product =>
          <Col md={4}>
            <Product p ={product} />
